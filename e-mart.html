@@ -59,8 +59,8 @@
             </li>
             <li class="nav-item">
               <a
-                href="#"
                 class="nav-link"
+                id="login"
                 onclick="document.getElementById('id01').style.display='block'"
                 ><i class="fa-solid fa-arrow-right-to-bracket"></i> Login</a
               >
@@ -78,9 +78,14 @@
     <div id="id01" class="modal">
       <form
         class="modal-content animate"
-        action="action_page.php"
-        method="post"
+        action="javascript: onLogin()"
       >
+
+        <div class="imgcontainer">
+          <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+          <img src="img/user.png" alt="Avatar" class="avatar">
+        </div>
+        
         <div class="container">
           <label for="uname"><b>Username</b></label>
           <input
@@ -147,11 +152,11 @@
     </section>
 
     <!-- credits -->
-    <section class="bg-light text-dark p-5 text-center text-sm-start">
+    <section class="bg-light text-dark p-5 text-center text-sm-start" id="credits" style="display: none">
       <div class="container">
         <div class="text-center">
           <h1>
-            You currently have <span class="text-warning">0 credits</span>
+            You currently have <span class="text-warning">0 credits</i></span>
           </h1>
           <p class="lead my-4">
             You can earn credits by completing goals and challenges.
@@ -162,9 +167,9 @@
     </section>
 
     <!-- hydroponics infrastructure -->
-    <section class="bg-dark text-light p-5 text-center">
+    <section class="bg-dark text-light p-5">
       <div class="container">
-        <h1>Hydroponics infrastructure</h1>
+        <h1 class="text-center">Hydroponics infrastructure</h1>
         <img
           src="img/WhatsApp Image 2022-06-22 at 10.14.43 PM.jpeg"
           alt=""
@@ -173,8 +178,32 @@
         />
         <p class="pt-3 lead text-start">
           <span class="btn btn-light"
-            ><i class="fa-solid fa-cart-shopping"></i> Add to Cart</span
+            ><i class="fa-solid fa-cart-shopping"></i> Add to Cart - $35.00 / 7c</span
           >
+        </p>
+        <p>
+          This set contains: Single Straight Piece (5 pots)
+          Attachment Straight Piece (5 pots)
+          Single Straight Piece (3 pots)
+          Attachment Straight Piece (3 pots)
+          Pipe Connector Peg
+          Single Pipe Piece
+          Single Pipe End Extrusion Piece
+          Dual  Pipe Junction Piece (1-Way) 
+          Dual  Pipe Junction Piece (2-Way) 
+          Single Pipe Junction Piece (1-Way)
+          Single Pipe Junction Piece (2-Way)</p>
+        <p>
+          Electronic Parts List: 
+          Stick-On LED Lights
+          230V Water Parts
+        </p>
+        <p>
+          Extended Parts List:
+          2.5 Litre Solution Container 
+          5 Litre Solution Container
+          Straight Pipe Piece
+          Elbow Bend Pipe Piece
         </p>
       </div>
     </section>

@@ -7,3 +7,10 @@ window.onclick = function(event) {
         modal.style.display = "none";
     }
 }
+
+function onLogin() {
+    document.getElementById('credits').style.display = "block";
+    document.getElementById('login').innerHTML = '<i class="fa-solid fa-user"></i> Profile';
+    document.getElementById('login')
+    modal.style.display = "none";
+}
