@@ -10,7 +10,11 @@ window.onclick = function(event) {
 
 function onLogin() {
     document.getElementById('credits').style.display = "block";
-    document.getElementById('login').innerHTML = '<i class="fa-solid fa-user"></i> Profile';
-    document.getElementById('login')
+    document.getElementById('login').style.display = "none";
+    document.getElementById('profile').style.display = "block";
     modal.style.display = "none";
+}
+
+document.getElementById('login').onclick = function() {
+    modal.style.display = 'block';
 }

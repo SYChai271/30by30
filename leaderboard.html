@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Leaderboards</title>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
+	<link rel="stylesheet" href="leaderboard.css">
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <style>
+        body,
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+          font-family: "Raleway", sans-serif;
+        }
+  
+        body,
+        html {
+          height: 100%;
+          line-height: 1.8;
+        }
+  
+        .w3-bar .w3-button {
+          padding: 16px;
+        }
+        .icon {
+          font-size: 1.5em;
+        }
+    </style>
+    <script
+    src="https://kit.fontawesome.com/dd8b6d6081.js"
+    crossorigin="anonymous"
+    ></script>
+</head>
+<body>
+    <!-- Navbar (sit on top) -->
+    <div class="w3-top">
+    <div class="w3-bar w3-white w3-card" id="myNavbar">
+        <a href="leaderboard.html" class="w3-bar-item w3-button w3-wide"><i class="fa-solid fa-trophy"></i> Leaderboards</a>
+        <!-- Right-sided navbar links -->
+        <div class="w3-right w3-hide-small">
+        <a href="index.html" class="w3-bar-item w3-button">Home</a>
+        <a href="leaderboard.html" class="w3-bar-item w3-button">Leaderboard</a>
+        <a href="#about" class="w3-bar-item w3-button">About</a>
+        <a href="e-mart.html" class="w3-bar-item w3-button"><i class="fa-solid fa-cart-shopping"></i> E-Mart</a>
+        </div>
+        <!-- Hide right-floated links on small screens and replace them with a menu icon -->
+
+        <a
+        href="javascript:void(0)"
+        class="w3-bar-item w3-button w3-right w3-hide-large w3-hide-medium"
+        onclick="w3_open()"
+        >
+        <i class="fa fa-bars"></i>
+        </a>
+    </div>
+    </div>
+  
+    <!-- Sidebar on small screens when clicking the menu icon -->
+    <nav
+    class="w3-sidebar w3-bar-block w3-black w3-card w3-animate-left w3-hide-medium w3-hide-large"
+    style="display: none"
+    id="mySidebar"
+    >
+    <a
+        href="javascript:void(0)"
+        onclick="w3_close()"
+        class="w3-bar-item w3-button w3-large w3-padding-16"
+        >Close ×</a
+    >
+    <a href="index.html" onclick="w3_close()" class="w3-bar-item w3-button"
+        >HOME</a
+    >
+    <a href="leaderboard.html" onclick="w3_close()" class="w3-bar-item w3-button"
+        >LEADERBOARD</a
+    >
+    <a href="#about" onclick="w3_close()" class="w3-bar-item w3-button"
+        >ABOUT</a
+    >
+    <a href="e-mart.html" onclick="w3_close()" class="w3-bar-item w3-button"
+        ><i class="fa-solid fa-cart-shopping"></i> E-Mart</a
+    >
+    </nav>
+
+<div class="wrapper">
+	<div class="lboard_section">
+		<div class="lboard_tabs">
+			<div class="tabs">
+				<ul>
+					<li data-li="today">Today</li>
+					<li class="active" data-li="month">Month</li>
+					<li data-li="year">Total</li>
+				</ul>
+			</div>
+		</div>
+
+		<div class="lboard_wrap">
+			<div class="lboard_item today" style="display: none;">
+				<div class="lboard_mem">
+					<div class="img">
+						<img src="img/pic_1.png" alt="picture_1">
+					</div>
+					<div class="name_bar">
+						<p><span>1.</span> Ethan</p>
+						<div class="bar_wrap">
+							<div class="inner_bar" style="width: 95%"></div>
+						</div>
+					</div>
+					<div class="points">
+						195 credits
+					</div>
+				</div>
+				<div class="lboard_mem">
+					<div class="img">
+						<img src="img/pic_2.png" alt="picture_2">
+					</div>
+					<div class="name_bar">
+						<p><span>2.</span>Shao Yang</p>
+						<div class="bar_wrap">
+							<div class="inner_bar" style="width: 80%"></div>
+						</div>
+					</div>
+					<div class="points">
+						185 credits
+					</div>
+				</div>
+				<div class="lboard_mem">
+					<div class="img">
+						<img src="img/pic_3.jpeg" alt="picture_2">
+					</div>
+					<div class="name_bar">
+						<p><span>3.</span>Gareth</p>
+						<div class="bar_wrap">
+							<div class="inner_bar" style="width: 60%;"></div>
+						</div>
+					</div>
+					<div class="points">
+						160 credits
+					</div>
+				</div>
+				<div class="lboard_mem">
+					<div class="img">
+						<img src="img/pic_4.jpeg" alt="picture_1">
+					</div>
+					<div class="name_bar">
+						<p><span>4.</span>Mr Tan</p>
+						<div class="bar_wrap">
+							<div class="inner_bar" style="width: 30%"></div>
+						</div>
+					</div>
+					<div class="points">
+						130 credits
+					</div>
+				</div>
+				<div class="lboard_mem">
+					<div class="img">
+						<img src="img/pic_5.jpeg" alt="picture_2">
+					</div>
+					<div class="name_bar">
+						<p><span>5.</span>Ming Wei</p>
+						<div class="bar_wrap">
+							<div class="inner_bar" style="width: 10%"></div>
+						</div>
+					</div>
+					<div class="points">
+						110 credits
+					</div>
+				</div>
+			</div>
+			<div class="lboard_item month" style="display: block;">
+				<div class="lboard_mem">
+					<div class="img">
+						<img src="img/pic_2.png" alt="picture_2">
+					</div>
+					<div class="name_bar">
+						<p><span>1.</span> Shao Yang</p>
+						<div class="bar_wrap">
+							<div class="inner_bar" style="width: 95%"></div>
+						</div>
+					</div>
+					<div class="points">
+						1195 credits
+					</div>
+				</div>
+				<div class="lboard_mem">
+					<div class="img">
+						<img src="img/pic_3.jpeg" alt="picture_3">
+					</div>
+					<div class="name_bar">
+						<p><span>2.</span>Gareth</p>
+						<div class="bar_wrap">
+							<div class="inner_bar" style="width: 80%"></div>
+						</div>
+					</div>
+					<div class="points">
+						1185 credits
+					</div>
+				</div>
+				<div class="lboard_mem">
+					<div class="img">
+						<img src="img/pic_1.png" alt="picture_1">
+					</div>
+					<div class="name_bar">
+						<p><span>3.</span>Ethan</p>
+						<div class="bar_wrap">
+							<div class="inner_bar" style="width: 70%;"></div>
+						</div>
+					</div>
+					<div class="points">
+						1160 credits
+					</div>
+				</div>
+				<div class="lboard_mem">
+					<div class="img">
+						<img src="img/pic_5.jpeg" alt="picture_5">
+					</div>
+					<div class="name_bar">
+						<p><span>4.</span>Ming Wei</p>
+						<div class="bar_wrap">
+							<div class="inner_bar" style="width: 50%"></div>
+						</div>
+					</div>
+					<div class="points">
+						1130 credits
+					</div>
+				</div>
+				<div class="lboard_mem">
+					<div class="img">
+						<img src="img/pic_4.jpeg" alt="picture_4">
+					</div>
+					<div class="name_bar">
+						<p><span>5.</span>Mr Tan</p>
+						<div class="bar_wrap">
+							<div class="inner_bar" style="width: 30%"></div>
+						</div>
+					</div>
+					<div class="points">
+						1110 credits
+					</div>
+				</div>
+			</div>
+			<div class="lboard_item year" style="display: none;">
+				<div class="lboard_mem">
+					<div class="img">
+						<img src="img/pic_5.jpeg" alt="picture_5">
+					</div>
+					<div class="name_bar">
+						<p><span>1.</span>Ming Wei</p>
+						<div class="bar_wrap">
+							<div class="inner_bar" style="width: 90%"></div>
+						</div>
+					</div>
+					<div class="points">
+						2195 credits
+					</div>
+				</div>
+				<div class="lboard_mem">
+					<div class="img">
+						<img src="img/pic_4.jpeg" alt="picture_4">
+					</div>
+					<div class="name_bar">
+						<p><span>2.</span>Mr Tan</p>
+						<div class="bar_wrap">
+							<div class="inner_bar" style="width: 85%"></div>
+						</div>
+					</div>
+					<div class="points">
+						2185 credits
+					</div>
+				</div>
+				<div class="lboard_mem">
+					<div class="img">
+						<img src="img/pic_3.jpeg" alt="picture_3">
+					</div>
+					<div class="name_bar">
+						<p><span>3.</span>Gareth</p>
+						<div class="bar_wrap">
+							<div class="inner_bar" style="width: 65%;"></div>
+						</div>
+					</div>
+					<div class="points">
+						2160 credits
+					</div>
+				</div>
+				<div class="lboard_mem">
+					<div class="img">
+						<img src="img/pic_1.png" alt="picture_1">
+					</div>
+					<div class="name_bar">
+						<p><span>4.</span>Ethan</p>
+						<div class="bar_wrap">
+							<div class="inner_bar" style="width: 30%"></div>
+						</div>
+					</div>
+					<div class="points">
+						2130 credits
+					</div>
+				</div>
+				<div class="lboard_mem">
+					<div class="img">
+						<img src="img/pic_2.png" alt="picture_2">
+					</div>
+					<div class="name_bar">
+						<p><span>5.</span>Shao Yang</p>
+						<div class="bar_wrap">
+							<div class="inner_bar" style="width: 10%"></div>
+						</div>
+					</div>
+					<div class="points">
+						2110 credits
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>	
+
+<script src="leaderboard.js"></script>
+</body>
+</html>
