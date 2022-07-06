@@ -1,3 +1,3 @@
 function onSignUp() {
-    window.location.href = "e-mart.html";
+  window.location.href = "e-mart.html";
 }
