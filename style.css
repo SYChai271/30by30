@@ -120,4 +120,7 @@ span.psw {
 }
 }
 
-
+#fruit {
+    max-width: fit-content;
+    height: auto;
+}
