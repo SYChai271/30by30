@@ -71,7 +71,8 @@
         <div class="w3-right w3-hide-small">
           <a href="index.html" class="w3-bar-item w3-button">Home</a>
           <a href="leaderboard.html" class="w3-bar-item w3-button">Leaderboard</a>
-          <a href="#upload" class="w3-bar-item w3-button">Upload</a>
+          <a class="w3-bar-item w3-button" id="login">Login</a>
+          <a href="#" class="w3-bar-item w3-button" id="profile" style="display: none">Profile</a>
           <a href="#about" class="w3-bar-item w3-button">About</a>
           <a href="e-mart.html" class="w3-bar-item w3-button"><i class="fa-solid fa-cart-shopping"></i> E-Mart</a>
         </div>
@@ -115,6 +116,61 @@
         ><i class="fa-solid fa-cart-shopping"></i> E-Mart</a
       >
     </nav>
+
+    <div id="id01" class="modal">
+      <form class="modal-content animate" action="javascript: onLogin()">
+        <div class="imgcontainer">
+          <span
+            onclick="document.getElementById('id01').style.display='none'"
+            class="close"
+            title="Close Modal"
+            >&times;</span
+          >
+          <img src="img/user.png" alt="Avatar" class="avatar" />
+        </div>
+
+        <div class="container">
+          <label for="uname"><b>Username</b></label>
+          <input
+            type="text"
+            placeholder="Enter Username"
+            name="uname"
+            required
+          />
+
+          <label for="psw"><b>Password</b></label>
+          <input
+            type="password"
+            placeholder="Enter Password"
+            name="psw"
+            required
+          />
+
+          <button type="submit" class="loginbtn">Login</button>
+          <label>
+            <input type="checkbox" checked="checked" name="remember" /> Remember
+            me
+          </label>
+        </div>
+
+        <div
+          class="container d-flex justify-content-between"
+          style="background-color: #f1f1f1"
+        >
+          <button
+            type="button"
+            onclick="document.getElementById('id01').style.display='none'"
+            class="loginbtn cancelbtn"
+          >
+            Cancel
+          </button>
+          <div class="d-flex align-items-end flex-column">
+            <a href="#">Forgot password?</a>
+            <a href="signup.html">Don't have an account?</a>
+          </div>
+        </div>
+      </form>
+    </div>
 
     <!-- Header with full-height image -->
     <header class="bgimg-1 w3-display-container" id="home"></header>
@@ -161,8 +217,8 @@
     </div>
 
     <!-- About Section -->
-    <div class="w3-container" style="padding: 128px 16px" id="about">
-      <h3 class="w3-center">Home</h3>
+    <div class="w3-container" style="padding: 128px 16px; display: none" id="about">
+      <h3 class="w3-center">Profile</h3>
       <p class="w3-center w3-large">
         Track your progress and see how your friends are doing!
       </p>
@@ -188,13 +244,13 @@
           </p>
         </div>
         <div class="w3-quarter">
-          <i class="fa-solid fa-box-archive w3-margin-bottom w3-jumbo"></i>
-          <p class="w3-large">Collection</p>
+          <i class="fa-solid fa-trophy w3-margin-bottom w3-jumbo"></i>
+          <p class="w3-large">Leaderboards</p>
           <p>
-            Keep track of your collection and see how you are doing. Complete challenges to unlock more plants
+            A record of individuals who excels in farming. "No competition, no progress", aim to be the best!
           </p>
           <p>
-            <a href="#" class="w3-button w3-black">Learn more »</a>
+            <a href="leaderboard.html" class="w3-button w3-black">Learn more »</a>
           </p>
         </div>
         <div class="w3-quarter">
@@ -226,6 +282,7 @@
         <i class="fa fa-twitter w3-hover-opacity"></i>
         <i class="fa fa-linkedin w3-hover-opacity"></i>
     </footer>
+    <script src="script.js"></script>
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"

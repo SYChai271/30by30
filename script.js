@@ -9,7 +9,12 @@ window.onclick = function(event) {
 }
 
 function onLogin() {
-    document.getElementById('credits').style.display = "block";
+    if (window.location.pathname == "/e-mart.html") {
+        document.getElementById('credits').style.display = "block";
+    }
+    else if (window.location.pathname == "/index.html") {
+        document.getElementById('about').style.display = 'block';
+    }
     document.getElementById('login').style.display = "none";
     document.getElementById('profile').style.display = "block";
     modal.style.display = "none";
