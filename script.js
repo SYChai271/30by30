@@ -8,6 +8,11 @@ window.onclick = function (event) {
   if (event.target == modal) {
     modal.style.display = "none";
   }
+  for (var i of allLoginsByClass) {
+    if (event.target == i) {
+      modal.style.display = "block";
+    }
+  }
 };
 
 function onLogin() {
@@ -23,12 +28,4 @@ function onLogin() {
     i.style.display = "block";
   }
   modal.style.display = "none";
-}
-
-window.onclick = function (event) {
-    for (var i of allLoginsByClass) {
-        if (event.target == i) {
-            modal.style.display = 'block';
-        }
-    }
 }
