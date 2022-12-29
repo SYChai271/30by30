@@ -48,10 +48,17 @@
       /* Full height image header */
       .bgimg-1 {
         background-position: center;
-        background-size: cover;
+        background-size: contain;
         background-image: url("img/WhatsApp Image 2022-05-26 at 10.40.43 PM.jpeg");
         background-repeat: no-repeat;
         min-height: 100%;
+      }
+
+      .bgimg-2 {
+        object-fit: none;
+        object-position: center;
+        height: 600px;
+        width: 100%;
       }
 
       .w3-bar .w3-button {
@@ -60,6 +67,7 @@
       .icon {
         font-size: 1.5em;
       }
+      
     </style>
   </head>
   <body>
@@ -70,7 +78,10 @@
         <!-- Right-sided navbar links -->
         <div class="w3-right w3-hide-small">
           <a href="index.html" class="w3-bar-item w3-button">Home</a>
-          <a href="leaderboard.html" class="w3-bar-item w3-button"
+          <a
+            href="leaderboard.html"
+            class="w3-bar-item w3-button profile"
+            style="display: none"
             >Leaderboard</a
           >
           <a class="w3-bar-item w3-button login" id="login">Login</a>
@@ -116,13 +127,11 @@
       <a
         href="leaderboard.html"
         onclick="w3_close()"
-        class="w3-bar-item w3-button"
+        class="w3-bar-item w3-button profile"
+        style="display: none"
         >LEADERBOARD</a
       >
-      <a
-        onclick="w3_close();"
-        class="w3-bar-item w3-button login"
-        id="login"
+      <a onclick="w3_close();" class="w3-bar-item w3-button login" id="login"
         >Login</a
       >
       <a
@@ -197,11 +206,12 @@
     </div>
 
     <!-- Header with full-height image -->
-    <header class="bgimg-1 w3-display-container" id="home"></header>
-
+    <header class="bgimg-1 w3-display-container img-fluid d-none d-sm-block" id="home"></header>
+    <img class="bgimg-2 img-fluid d-block d-sm-none" src="img/My project.jpg"/> 
+    
     <div
       class="w3-container w3-display-left w3-text-black"
-      style="padding: 48px; padding-top: 700px"
+      style="padding: 48px; padding-top: 400px;"
     >
       <span class="w3-large">Start by contributing to the 30 by 30 goal</span>
       <p>
